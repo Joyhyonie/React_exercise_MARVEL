@@ -24,6 +24,11 @@
     font-weight: 900;
 }
 
+.Navbar Link {
+    text-decoration-line: none;
+
+}
+
 .Footer {
     display: flex;
     justify-content: center;
@@ -39,4 +44,19 @@
 .Main img {
     width: 50%;
     margin: 20px 0px;
+}
+
+.CharacterCard div {
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 40px;
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+}
+
+.CharacterCard img {
+    width: 200px;
+    height: 200px;
 }
