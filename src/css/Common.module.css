@@ -1,0 +1,42 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 10px;
+}
+
+.Header img {
+    width: 200px;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.Navbar div {
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.Footer {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.Footer div {
+    color: white;
+    padding: 80px 0px;
+    font-size: 20px;
+}
+
+.Main img {
+    width: 50%;
+    margin: 20px 0px;
+}
