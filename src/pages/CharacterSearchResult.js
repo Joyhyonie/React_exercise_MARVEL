@@ -37,6 +37,7 @@ function CharacterSearchResult() {
 
     return (
         <>
+            <h1 className={ customStyle.Subject }>SEARCH RESULTS AS { characterName }</h1>
             <div class={ customStyle.SearchBox }>
             <input 
                 type="text" 

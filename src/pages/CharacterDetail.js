@@ -21,9 +21,12 @@ function CharacterDetail() {
     console.log(detail)
 
     return(
-        <div className={ customStyle.CharacterEvent }>
-        { detail && detail.map(event => <CharacterEvent event={ event } key={ event.id }/>)}
-        </div>
+        <>
+            <h1 className={ customStyle.Subject }>THIS CHARACTER'S EVENT</h1>
+            <div className={ customStyle.CharacterEvent }>
+            { detail && detail.map(event => <CharacterEvent event={ event } key={ event.id }/>)}
+            </div>
+        </>
     );
 }
 

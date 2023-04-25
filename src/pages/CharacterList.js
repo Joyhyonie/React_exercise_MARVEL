@@ -31,6 +31,7 @@ function CharacterList() {
 
     return (
         <>
+            <h1 className={ customStyle.Subject }>ALL CHARACTERS</h1>
             <div class={ customStyle.SearchBox }>
             <input 
                 type="text" 

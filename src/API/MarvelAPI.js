@@ -48,3 +48,16 @@ export async function getComicList() {
 
     return data.data.results;
 }
+
+/* 만화별 등장인물 조회 */
+export async function getComicDetail(id) {
+
+    const url = `https://gateway.marvel.com:443/v1/public/comics/${ id }/characters?ts=${ ts }&apikey=${ PUBLIC_KEY }&hash=${ hash }`
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data.data.results)
+
+    return data.data.results;
+
+}
