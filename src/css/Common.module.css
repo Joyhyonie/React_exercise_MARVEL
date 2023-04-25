@@ -108,3 +108,34 @@
     font-size: 18px;
     margin: 20px;
 }
+
+.SearchBox {
+    margin: 20px;
+}
+
+.SearchBox input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 3px solid gray;
+}
+
+.SearchBox button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    background: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.ComicItem {
+    
+}
+
+.Error {
+    display: flex;
+    justify-content: center;
+    margin: 300px;
+}

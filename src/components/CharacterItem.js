@@ -10,7 +10,6 @@ function CharacterItem({ character }) {
         <div>
             <h2>{ character.name }</h2>
             <img src={ imageUrl }></img>
-            <p>[{ character.id }]</p>
         </div>
         </Link>
     );

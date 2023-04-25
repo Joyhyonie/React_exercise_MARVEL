@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
-import { getCharacterList } from "../API/MarvelAPI";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { getSearchCharacter } from "../API/MarvelAPI";
 import customStyle from '../css/Common.module.css';
 import CharacterItem from "../components/CharacterItem";
-import { useNavigate } from "react-router-dom";
 
 
-function CharacterList() {
-    
-    const [characterList, setCharacterList] = useState();
+function CharacterSearchResult() {
+
+    const [searchParams] = useSearchParams();
     const [searchValue, setSearchValue] = useState();
 
     const navigate = useNavigate();
 
+    const characterName = searchParams.get('characterNameStartWith');
+    console.log(characterName);
+
+    const [characterList, setCharacterList] = useState();
+
     useEffect(
-        ()=> {
-            getCharacterList()
+        () => {
+            getSearchCharacter(characterName)
                 .then(data => {setCharacterList(data)})
         },[]
-    )
-
-    console.log(characterList);
+    );
 
     const onChangeHandler = (e) => {
         setSearchValue(e.target.value);
@@ -28,6 +31,9 @@ function CharacterList() {
     const onClickHandler = () => {
         navigate(`/characters/search?characterNameStartWith=${ searchValue }`)
     }
+
+    console.log(characterList)
+    
 
     return (
         <>
@@ -46,4 +52,4 @@ function CharacterList() {
     );
 }
 
-export default CharacterList;
+export default CharacterSearchResult;

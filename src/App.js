@@ -4,6 +4,9 @@ import Main from './pages/Main';
 import CharacterList from './pages/CharacterList';
 import ComicList from './pages/ComicList';
 import CharacterDetail from './pages/CharacterDetail';
+import CharacterSearchResult from './pages/CharacterSearchResult';
+import ComicDetail from './pages/ComicDetail';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -14,8 +17,13 @@ function App() {
           <Route path="characters">
             <Route index element={ <CharacterList/> }/>
             <Route path=":id" element={ <CharacterDetail/> }/>
+            <Route path="search" element={ <CharacterSearchResult/> }/>
           </Route>
-          <Route path="comics" element={ <ComicList/> }/>
+          <Route path="comics">
+            <Route index element={ <ComicList/> }/>
+            <Route path=":id" element={ <ComicDetail/> }/>
+          </Route>
+          <Route path="*" element={<Error />}/>
         </Route>
       </Routes>    
     </BrowserRouter>
