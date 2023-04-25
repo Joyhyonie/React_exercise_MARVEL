@@ -6,10 +6,9 @@ function CharacterItem({ character }) {
 
     return (
         <div>
-            <h3>캐릭터의 ID : { character.id }</h3>
-            <h3>캐릭터의 이름 : { character.name }</h3>
+            <h2>{ character.name }</h2>
             <img src={ imageUrl }></img>
-
+            <p>[{ character.id }]</p>
         </div>
     );
 }
