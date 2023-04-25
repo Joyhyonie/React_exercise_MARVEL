@@ -4,7 +4,7 @@ function CharacterEvent({ event }) {
 
     return (
         <div>
-            <h2>{ event.title }</h2>
+            <h1>{ event.title }</h1>
             <img src={ imageUrl }></img>
             <p>{ event.description }</p>
         </div>

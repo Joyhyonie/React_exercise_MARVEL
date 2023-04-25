@@ -3,10 +3,12 @@ import customStyle from '../css/Common.module.css';
 
 function CharacterItem({ character }) {
 
+    const linkStyle = { color: "black" }
+
     const imageUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
 
     return (
-        <Link to={ `/characters/${ character.id }` }>
+        <Link to={ `/characters/${ character.id }` } style={ linkStyle }>
         <div>
             <h2>{ character.name }</h2>
             <img src={ imageUrl }></img>

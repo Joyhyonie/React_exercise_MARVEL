@@ -17,16 +17,10 @@
 
 .Navbar div {
     color: white;
-    width: 50%;
     text-align: center;
-    padding: 10px;
+    padding: 10px 450px;
     font-size: 20px;
     font-weight: 900;
-}
-
-.Navbar Link {
-    text-decoration-line: none;
-
 }
 
 .Footer {

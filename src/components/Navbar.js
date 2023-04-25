@@ -1,12 +1,14 @@
+import { Link, NavLink } from 'react-router-dom';
 import customStyle from '../css/Common.module.css';
-import { Link } from 'react-router-dom';
 
 function Navbar() {
 
+    const linkStyle = { textDecoration: "none" }
+
     return (
         <div className={ customStyle.Navbar } >
-            <div>ALL CHARACTERS</div>
-            <div>COMICS</div>
+            <Link to="characters" style={ linkStyle }><div>CHARACTERS</div></Link>
+            <Link to="comics" style={ linkStyle }><div>COMICS</div></Link>
         </div>
     );
 }
